@@ -68,7 +68,7 @@ def test():
     assert setup(platform.machine() == 'AMD64')
     hwnd = ctypes.windll.user32.FindWindowW(TEST_CLASSNAME, 0)
     assert hwnd != 0
-    set_inline_position(hwnd, x, y, 'font', font_height)
+    set_inline_position(hwnd, x, y, 'font', int(font_height))
 
 
 def window_process():
